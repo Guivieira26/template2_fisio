@@ -173,5 +173,4 @@
   }
   .animate-fade-up { animation: fade-up 0.9s ease forwards; }
   .animate-marquee { animation: marquee 40s linear infinite; }
-  }
 }
