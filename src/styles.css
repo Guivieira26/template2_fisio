@@ -147,5 +147,31 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+  }
+
+  h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    letter-spacing: -0.01em;
+  }
+}
+
+@layer utilities {
+  .font-serif-display { font-family: var(--font-serif); }
+  .font-body { font-family: var(--font-sans); }
+  .bg-gradient-warm { background: var(--gradient-warm); }
+  .shadow-editorial { box-shadow: var(--shadow-editorial); }
+  .text-ink { color: var(--ink); }
+  .bg-paper { background-color: var(--paper); }
+  @keyframes fade-up {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  .animate-fade-up { animation: fade-up 0.9s ease forwards; }
+  .animate-marquee { animation: marquee 40s linear infinite; }
   }
 }
