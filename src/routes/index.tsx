@@ -361,34 +361,34 @@ function Index() {
       <section id="contato" className="py-24 md:py-36 px-6 md:px-10 bg-foreground text-background">
         <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
-            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">
+            <div className="text-xs uppercase tracking-[0.3em] text-background/70 mb-4">
               Contato ·  §05
             </div>
             <h2 className="font-serif-display text-5xl md:text-6xl leading-none mb-8">
               Comece sua<br />
-              <em className="text-primary">recuperação</em><br />
+              <em className="text-background underline decoration-primary decoration-2 underline-offset-8">recuperação</em><br />
               hoje.
             </h2>
-            <p className="text-background/70 text-lg leading-relaxed mb-10">
+            <p className="text-background/80 text-lg leading-relaxed mb-10">
               Primeira avaliação sem compromisso. Atendimento domiciliar e
               consultório em Belo Horizonte.
             </p>
             <div className="space-y-6">
               <div>
-                <div className="text-xs uppercase tracking-widest text-background/50 mb-1">Endereço</div>
+                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Endereço</div>
                 <div className="font-serif-display text-2xl">Belo Horizonte — MG</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-background/50 mb-1">Horários</div>
+                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Horários</div>
                 <div className="font-serif-display text-2xl">Seg – Sex · 7h às 18h</div>
               </div>
               <div>
-                <div className="text-xs uppercase tracking-widest text-background/50 mb-1">WhatsApp</div>
+                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">WhatsApp</div>
                 <a
                   href="https://wa.me/5531991337130"
                   target="_blank"
                   rel="noreferrer"
-                  className="font-serif-display text-2xl text-primary hover:underline"
+                  className="font-serif-display text-2xl text-background hover:text-primary transition-colors"
                 >
                   (31) 9 9133-7130
                 </a>
@@ -396,48 +396,25 @@ function Index() {
             </div>
           </div>
 
-          <form
-            className="md:col-span-7 md:pl-8 space-y-6"
-            onSubmit={(e) => {
-              e.preventDefault();
-              alert("Mensagem enviada! Entraremos em contato em breve.");
-            }}
-          >
-            {[
-              { label: "Nome completo", type: "text", ph: "Como podemos te chamar" },
-              { label: "Telefone / WhatsApp", type: "tel", ph: "(31) 9 0000-0000" },
-              { label: "E-mail", type: "email", ph: "seu@email.com" },
-              { label: "Prática de interesse", type: "text", ph: "Ex: Fisioterapia Neurológica" },
-            ].map((f) => (
-              <div key={f.label}>
-                <label className="block text-xs uppercase tracking-widest text-background/60 mb-2">
-                  {f.label}
-                </label>
-                <input
-                  type={f.type}
-                  placeholder={f.ph}
-                  required
-                  className="w-full bg-transparent border-b border-background/30 py-3 text-lg text-background placeholder:text-background/30 focus:border-primary focus:outline-none transition-colors"
-                />
-              </div>
-            ))}
-            <div>
-              <label className="block text-xs uppercase tracking-widest text-background/60 mb-2">
-                Mensagem (opcional)
-              </label>
-              <textarea
-                rows={3}
-                placeholder="Descreva brevemente sua queixa ou dúvida..."
-                className="w-full bg-transparent border-b border-background/30 py-3 text-lg text-background placeholder:text-background/30 focus:border-primary focus:outline-none transition-colors resize-none"
-              />
+          <div className="md:col-span-7 md:pl-8 flex flex-col justify-center">
+            <div className="border border-background/20 p-8 md:p-12 bg-background/5 backdrop-blur">
+              <p className="font-serif-display text-2xl md:text-3xl leading-snug mb-6">
+                Vamos conversar e encontrar o melhor caminho para o seu cuidado.
+              </p>
+              <p className="text-background/70 mb-8">
+                Clique no botão abaixo e envie uma mensagem pré-preenchida pelo WhatsApp. Responderemos o mais breve possível.
+              </p>
+              <a
+                href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-sm uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors"
+              >
+                <span>Conversar no WhatsApp</span>
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
-            <button
-              type="submit"
-              className="mt-4 w-full md:w-auto px-10 py-4 bg-primary text-primary-foreground text-sm uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors"
-            >
-              Enviar e agendar consulta →
-            </button>
-          </form>
+          </div>
         </div>
       </section>
 
@@ -461,7 +438,7 @@ function Index() {
 
       {/* Floating WhatsApp */}
       <a
-        href="https://wa.me/5531991337130"
+        href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
         target="_blank"
         rel="noreferrer"
         aria-label="WhatsApp"
