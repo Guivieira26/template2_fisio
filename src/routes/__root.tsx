@@ -77,10 +77,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "FisioSaúde · Fisioterapia humanizada em Belo Horizonte" },
+      { title: "Deivis Cordeiro · Fisioterapeuta em Belo Horizonte" },
       { name: "description", content: "Fisioterapia domiciliar e especializada em BH. 23 anos de experiência em CTI, ortopedia, neurologia, geriatria, acupuntura e ergonomia. CREFITO 54341-F." },
-      { name: "author", content: "FisioSaúde" },
-      { property: "og:title", content: "FisioSaúde · Fisioterapia humanizada em BH" },
+      { name: "author", content: "Deivis Cordeiro" },
+      { property: "og:title", content: "Deivis Cordeiro · Fisioterapia humanizada em BH" },
       { property: "og:description", content: "Recupere movimento, autonomia e qualidade de vida com atendimento fisioterapêutico personalizado em Belo Horizonte." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -90,7 +90,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
         rel: "stylesheet",
         href: appCss,
       },
-      { rel: "icon", href: "/favicon.ico", type: "image/x-icon" },
+      { rel: "icon", href: "/images/favicon.png", type: "image/png" },
+      { rel: "apple-touch-icon", href: "/images/apple-touch-icon.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {

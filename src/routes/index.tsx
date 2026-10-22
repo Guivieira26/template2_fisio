@@ -67,9 +67,22 @@ function Index() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between py-4">
-          <a href="#" className="flex items-baseline gap-2">
-            <span className="font-serif-display text-2xl md:text-3xl italic text-primary">Fisio</span>
-            <span className="font-serif-display text-2xl md:text-3xl text-ink">Saúde</span>
+          <a href="#" className="flex items-center gap-3" aria-label="Deivis Cordeiro · Fisioterapeuta">
+            <img
+              src="/images/logo-simbolo.png"
+              alt=""
+              width={569}
+              height={600}
+              className="h-10 md:h-12 w-auto"
+            />
+            <span className="flex flex-col leading-none">
+              <span className="font-serif-display text-xl md:text-2xl tracking-wide text-ink uppercase">
+                Deivis Cordeiro
+              </span>
+              <span className="mt-1 text-[0.6rem] md:text-[0.65rem] uppercase tracking-[0.4em] text-primary">
+                Fisioterapeuta
+              </span>
+            </span>
           </a>
           <div className="hidden md:flex items-center gap-8">
             {nav.map((n) => (
@@ -155,15 +168,17 @@ function Index() {
 
           <div className="md:col-span-5 md:pl-8">
             <div className="relative aspect-[3/4] bg-gradient-warm overflow-hidden shadow-editorial">
-              <div className="absolute inset-0 flex items-center justify-center text-background/40 text-8xl">
-                ✦
-              </div>
-              <div className="absolute bottom-0 inset-x-0 p-6 bg-background/10 backdrop-blur border-t border-background/20">
+              <img
+                src="/images/deivis-retrato.webp"
+                alt="Deivis Cordeiro, fisioterapeuta, de jaleco branco"
+                width={852}
+                height={1280}
+                fetchPriority="high"
+                className="absolute inset-0 w-full h-full object-cover object-top"
+              />
+              <div className="absolute bottom-0 inset-x-0 p-6 bg-foreground/35 backdrop-blur border-t border-background/20">
                 <div className="text-xs uppercase tracking-widest text-background/70">CREFITO</div>
                 <div className="font-serif-display text-2xl text-background mt-1">Nº 54341-F</div>
-              </div>
-              <div className="absolute top-6 right-6 text-xs uppercase tracking-widest text-background/80 rotate-90 origin-top-right">
-                Retrato · sua foto aqui
               </div>
             </div>
             <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
@@ -185,8 +200,15 @@ function Index() {
       </header>
 
       {/* MANIFESTO — big pull quote */}
-      <section id="manifesto" className="py-24 md:py-36 px-6 md:px-10 bg-foreground text-background">
-        <div className="max-w-5xl mx-auto">
+      <section id="manifesto" className="relative overflow-hidden py-24 md:py-36 px-6 md:px-10 bg-foreground text-background">
+        <img
+          src="/images/logo-simbolo-claro.png"
+          alt=""
+          aria-hidden="true"
+          loading="lazy"
+          className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-[26rem] md:w-[34rem] opacity-[0.12]"
+        />
+        <div className="relative max-w-5xl mx-auto">
           <div className="text-xs uppercase tracking-[0.4em] text-background/50 mb-10">Manifesto ·  §01</div>
           <p className="font-serif-display text-3xl md:text-5xl leading-tight text-background">
             Cada corpo carrega uma história. A fisioterapia começa quando alguém
@@ -196,7 +218,7 @@ function Index() {
           <div className="mt-16 flex items-center gap-4">
             <span className="h-px w-16 bg-primary" />
             <span className="text-sm uppercase tracking-widest text-background/70">
-              Renato — 23 anos de prática clínica
+              Deivis Cordeiro — 23 anos de prática clínica
             </span>
           </div>
         </div>
@@ -262,12 +284,14 @@ function Index() {
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-12">
           <div className="md:col-span-5">
             <div className="aspect-[4/5] bg-secondary/40 relative overflow-hidden shadow-editorial">
-              <div className="absolute inset-0 flex items-center justify-center text-foreground/20 text-8xl">
-                ❦
-              </div>
-              <div className="absolute bottom-6 left-6 right-6 text-xs uppercase tracking-widest text-foreground/60">
-                Retrato do profissional
-              </div>
+              <img
+                src="/images/deivis-atendimento.webp"
+                alt="Deivis Cordeiro realizando atendimento de fisioterapia com uma paciente"
+                width={683}
+                height={854}
+                loading="lazy"
+                className="absolute inset-0 w-full h-full object-cover"
+              />
             </div>
           </div>
           <div className="md:col-span-7 md:pl-8">
@@ -421,9 +445,12 @@ function Index() {
       {/* FOOTER */}
       <footer className="py-10 px-6 md:px-10 bg-background border-t border-border">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-baseline gap-2">
-            <span className="font-serif-display text-xl italic text-primary">Fisio</span>
-            <span className="font-serif-display text-xl text-ink">Saúde</span>
+          <div className="flex items-center gap-3">
+            <img src="/images/logo-simbolo.png" alt="" width={569} height={600} loading="lazy" className="h-10 w-auto" />
+            <span className="flex flex-col leading-none">
+              <span className="font-serif-display text-xl tracking-wide text-ink uppercase">Deivis Cordeiro</span>
+              <span className="mt-1 text-[0.6rem] uppercase tracking-[0.4em] text-primary">Fisioterapeuta</span>
+            </span>
           </div>
           <div className="flex gap-8 text-xs uppercase tracking-widest text-muted-foreground">
             <a href="#" className="hover:text-primary transition-colors">Instagram</a>
@@ -431,7 +458,7 @@ function Index() {
             <a href="#" className="hover:text-primary transition-colors">Google</a>
           </div>
           <p className="text-xs text-muted-foreground">
-            © 2025 FisioSaúde · CREFITO 54341-F
+            © 2026 Deivis Cordeiro · CREFITO 54341-F
           </p>
         </div>
       </footer>
