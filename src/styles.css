@@ -167,6 +167,7 @@
 @layer utilities {
   .font-serif-display {
     font-family: var(--font-serif);
+    font-variant-numeric: lining-nums;
   }
 
   .font-body {

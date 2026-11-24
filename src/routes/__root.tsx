@@ -78,7 +78,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "Deivis Cordeiro · Fisioterapeuta em Belo Horizonte" },
-      { name: "description", content: "Fisioterapia domiciliar e especializada em BH. 23 anos de experiência em CTI, ortopedia, neurologia, geriatria, acupuntura e ergonomia. CREFITO 54341-F." },
+      { name: "description", content: "Fisioterapia domiciliar e especializada em BH. 25 anos de experiência em CTI, ortopedia, neurologia, geriatria, acupuntura e ergonomia. CREFITO 54341-F." },
       { name: "author", content: "Deivis Cordeiro" },
       { property: "og:title", content: "Deivis Cordeiro · Fisioterapia humanizada em BH" },
       { property: "og:description", content: "Recupere movimento, autonomia e qualidade de vida com atendimento fisioterapêutico personalizado em Belo Horizonte." },

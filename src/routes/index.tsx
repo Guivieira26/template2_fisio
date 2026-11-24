@@ -8,21 +8,21 @@ export const Route = createFileRoute("/")({
 const services = [
   { n: "01", title: "Fisioterapia Respiratória", tag: "Atendimento CTI", desc: "Atuação especializada no cuidado de pacientes críticos, com foco na prevenção de complicações, recuperação funcional, reabilitação respiratória e motora, contribuindo para uma evolução clínica mais segura." },
   { n: "02", title: "Fisioterapia Ortopédica e Desportiva", tag: "Atletas & Ativos", desc: "Atuação na prevenção de lesões, recuperação funcional e aprimoramento do desempenho físico, auxiliando atletas e praticantes de atividades esportivas a retornarem às suas atividades com segurança." },
-  { n: "03", title: "Fisioterapia Neurológica", tag: "AVC · Parkinson", desc: "Tratamento especializado para recuperar a funcionalidade e independência de pacientes com sequelas de AVC, Parkinson, esclerose e outras condições neuromotoras." },
+  { n: "03", title: "Fisioterapia Neurológica", tag: "Distúrbios neurológicos", desc: "Tratamento especializado para recuperar a funcionalidade e independência de pacientes com sequelas de AVC, Parkinson, esclerose e outras condições neuromotoras." },
   { n: "04", title: "Fisioterapia na Saúde do Idoso", tag: "Envelhecer bem", desc: "Envelhecer com qualidade é manter a capacidade de viver com autonomia. A fisioterapia atua no cuidado integral do idoso, promovendo movimento, segurança e qualidade de vida em todas as fases do envelhecimento." },
   { n: "05", title: "Acupuntura", tag: "Terapia integrativa", desc: "Aplicação de técnicas tradicionais para modulação da dor, controle de processos inflamatórios, redução do estresse e equilíbrio sistêmico do organismo." },
   { n: "06", title: "Fisioterapia do Trabalho e Ergonomia", tag: "Saúde ocupacional", desc: "Avaliação e intervenção voltadas à saúde ocupacional, prevenção de lesões relacionadas ao trabalho, adequação ergonômica e promoção de ambientes mais seguros e saudáveis." },
 ];
 
 const testimonials = [
-  { name: "Alexandre", role: "Fisioterapia Neurológica", text: "Me respeitou como pessoa e mesmo com dois meses de internamento, me ajudou muito a fazer com que a depressão ficasse longe. Obrigado pelo apoio, pois sabemos que não é fácil com tanta gente pra ser ajudada e ainda manter um atendimento personalizado, um cuidado efetivo. Obrigado meu amigo, que Deus te abençoe e te guarde, sempre." },
-  { name: "Kauanny", role: "Atendimento CTI", text: "Eu lhe agradeço muito, dia 22/07 fez um ano da minha alta e do dia em que consegui caminhar com sua ajuda... Deus te abençoe grandiosamente seu trabalho e sua humanidade fazem a diferença na vida de muitas pessoas grande abraço fisio, serei eternamente grata! 🙏🏼" },
-  { name: "Carlos", role: "Paciente - COVID-19", text: "Cara só tenho a agradecer se não fosse sua atenção, cuidado e dedicação talvez eu nem estaria aqui hoje. Que Deus te abençõe imensamente e que você continue prestando esse serviço maravilhoso como fisio, muito obrigado!" },
+  { name: "Alexandre", role: "17/01/2022 - Hospital Santa Cruz\n(rede d´or)", text: "Me respeitou como pessoa e mesmo com dois meses de internamento, me ajudou muito a fazer com que a depressão ficasse longe. Obrigado pelo apoio, pois sabemos que não é fácil com tanta gente pra ser ajudada e ainda manter um atendimento personalizado, um cuidado efetivo. Obrigado meu amigo, que Deus te abençoe e te guarde, sempre." },
+  { name: "Kauanny", role: "22/07/2021 - Hospital Santa Cruz\n(rede d´or)", text: "Eu lhe agradeço muito, dia 22/07 fez um ano da minha alta e do dia em que consegui caminhar com sua ajuda... Deus te abençoe grandiosamente seu trabalho e sua humanidade fazem a diferença na vida de muitas pessoas grande abraço fisio, serei eternamente grata! 🙏🏼" },
+  { name: "Carlos", role: "20/06/2021 - Hospital Vitória", text: "Cara só tenho a agradecer se não fosse sua atenção, cuidado e dedicação talvez eu nem estaria aqui hoje. Que Deus te abençõe imensamente e que você continue prestando esse serviço maravilhoso como fisio, muito obrigado!" },
 ];
 
 const stats = [
   { value: "5.700+", label: "Pacientes atendidos" },
-  { value: "23+", label: "Anos de experiência" },
+  { value: "25+", label: "Anos de experiência" },
   { value: "100%", label: "Taxa de satisfação" },
   { value: "12", label: "Especialidades" },
 ];
@@ -51,10 +51,10 @@ function Index() {
   };
 
   const nav = [
-    { id: "manifesto", label: "Manifesto" },
+    { id: "manifesto", label: "No que acredito" },
     { id: "praticas", label: "Práticas" },
     { id: "sobre", label: "Sobre" },
-    { id: "vozes", label: "Vozes" },
+    { id: "vozes", label: "Depoimentos" },
     { id: "contato", label: "Contato" },
   ];
 
@@ -133,19 +133,19 @@ function Index() {
       <header id="inicio" className="relative pt-32 md:pt-40 pb-20 md:pb-28 px-6 md:px-10">
         <div className="max-w-7xl mx-auto grid md:grid-cols-12 gap-8 items-end">
           <div className="md:col-span-7 animate-fade-up">
-            <div className="flex items-center gap-3 mb-8 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+            <div className="flex items-center gap-3 mb-8 text-sm uppercase tracking-[0.3em] text-muted-foreground">
               <span className="h-px w-10 bg-primary" />
               <span>Belo Horizonte · Atendimento presencial</span>
             </div>
             <h1 className="font-serif-display text-[clamp(3rem,8vw,7rem)] leading-[0.95] text-ink">
-              O movimento
+              Para recuperar
               <br />
-              é o caminho de
+              sua <em className="text-primary font-normal">autonomia</em> comece pelo
               <br />
-              <em className="text-primary font-normal">volta a si.</em>
+              <em className="text-primary font-normal">movimento !</em>
             </h1>
             <p className="mt-10 max-w-lg text-lg md:text-xl text-foreground/70 leading-relaxed">
-              Fisioterapia que vai até você — cuidado especializado para
+              Fisioterapia que vai até você! Cuidado especializado para
               recuperar movimentos, autonomia e qualidade de vida, com um olhar
               humano em cada consulta.
             </p>
@@ -177,12 +177,13 @@ function Index() {
               />
               <div className="absolute bottom-0 inset-x-0 p-6 bg-foreground/35 backdrop-blur border-t border-background/20">
                 <div className="text-xs uppercase tracking-widest text-background/70">CREFITO</div>
-                <div className="font-serif-display text-2xl text-background mt-1">Nº 54341-F</div>
+                <div className="font-body font-medium tracking-wide tabular-nums text-xl text-background mt-1">Nº 54341-F</div>
               </div>
             </div>
-            <div className="mt-6 flex items-center gap-4 text-sm text-muted-foreground">
+            <div className="mt-6 flex items-center text-sm text-muted-foreground">
               <span className="font-serif-display italic text-2xl text-primary">"</span>
               <span>Um cuidado que atravessa gerações e histórias.</span>
+              <span className="font-serif-display italic text-2xl text-primary">"</span>
             </div>
           </div>
         </div>
@@ -191,7 +192,7 @@ function Index() {
         <div className="max-w-7xl mx-auto mt-24 grid grid-cols-2 md:grid-cols-4 border-t border-border">
           {stats.map((s) => (
             <div key={s.label} className="py-8 px-2 md:px-6 border-r last:border-r-0 border-border">
-              <div className="font-serif-display text-4xl md:text-5xl text-ink">{s.value}</div>
+              <div className="font-body font-light tracking-tight tabular-nums text-4xl md:text-5xl text-ink">{s.value}</div>
               <div className="mt-2 text-xs uppercase tracking-widest text-muted-foreground">{s.label}</div>
             </div>
           ))}
@@ -208,7 +209,7 @@ function Index() {
           className="pointer-events-none absolute -right-24 top-1/2 -translate-y-1/2 w-[26rem] md:w-[34rem] opacity-[0.12]"
         />
         <div className="relative max-w-5xl mx-auto">
-          <div className="text-xs uppercase tracking-[0.4em] text-background/50 mb-10">Manifesto ·  §01</div>
+          <div className="text-sm uppercase tracking-[0.4em] text-background/50 mb-10">No que Acredito</div>
           <p className="font-serif-display text-3xl md:text-5xl leading-tight text-background">
             Cada corpo carrega uma história. A fisioterapia começa quando alguém
             se dispõe a ouvir essa história{" "}
@@ -217,7 +218,7 @@ function Index() {
           <div className="mt-16 flex items-center gap-4">
             <span className="h-px w-16 bg-primary" />
             <span className="text-sm uppercase tracking-widest text-background/70">
-              Deivis Cordeiro — 23 anos de prática clínica
+              Deivis Cordeiro — 25 anos de prática clínica
             </span>
           </div>
         </div>
@@ -228,10 +229,10 @@ function Index() {
         <div className="max-w-7xl mx-auto">
           <div className="grid md:grid-cols-12 gap-8 mb-16 items-end">
             <div className="md:col-span-5">
-              <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Práticas ·  §02</div>
+              <div className="text-sm uppercase tracking-[0.3em] text-primary mb-4">Práticas</div>
               <h2 className="font-serif-display text-5xl md:text-6xl text-ink leading-none">
-                Seis modos de<br />
-                <em className="text-primary">cuidar</em>.
+                Tratamentos e
+                <em className="text-primary"> Especialidades</em>
               </h2>
             </div>
             <p className="md:col-span-6 md:col-start-7 text-lg text-foreground/70 leading-relaxed">
@@ -294,14 +295,14 @@ function Index() {
             </div>
           </div>
           <div className="md:col-span-7 md:pl-8">
-            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Sobre ·  §03</div>
+            <div className="text-sm uppercase tracking-[0.3em] text-primary mb-4">Sobre</div>
             <h2 className="font-serif-display text-4xl md:text-6xl text-ink leading-tight mb-8">
               Um olhar <em className="text-primary">empático</em> a quem confia
               na sua recuperação.
             </h2>
             <div className="space-y-5 text-foreground/75 text-lg leading-relaxed">
               <p>
-                Com <strong className="text-ink">23 anos de dedicação</strong>{" "}
+                Com <strong className="text-ink">25 anos de dedicação</strong>{" "}
                 à Fisioterapia, desenvolvo um trabalho voltado à recuperação
                 funcional, prevenção de limitações e promoção da qualidade de
                 vida. Minha trajetória profissional é marcada pela busca
@@ -353,128 +354,128 @@ function Index() {
       <section id="vozes" className="py-24 md:py-36 px-6 md:px-10 bg-muted">
         <div className="max-w-7xl mx-auto">
           <div className="mb-16 max-w-2xl">
-            <div className="text-xs uppercase tracking-[0.3em] text-primary mb-4">Vozes ·  §04</div>
+            <div className="text-sm uppercase tracking-[0.3em] text-primary mb-4">Depoimentos</div>
             <h2 className="font-serif-display text-5xl md:text-6xl text-ink leading-none">
               O que fica nas <em className="text-primary">memórias</em> de quem
               passou por aqui.
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-              {
-                testimonials.map((t) => (
-                  <blockquote
-                    key={t.name}
-                    className="bg-background p-8 md:p-10 border border-border relative flex flex-col"
-                  >
-                    <span className="font-serif-display text-8xl italic text-primary/30 leading-none absolute -top-2 left-6">
-                      "
-                    </span>
-                    <p className="relative font-serif-display text-xl italic text-ink leading-relaxed mb-8 mt-6">
-                      {t.text}
-                    </p>
-                        <footer className="border-t border-border pt-5 mt-auto">
-                          <div className="font-serif-display text-xl text-ink">{t.name}</div>
-                          <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
-                            {t.role}
-                          </div>
-                        </footer>
-                      </blockquote>
-            ))}
+            {
+              testimonials.map((t) => (
+                <blockquote
+                  key={t.name}
+                  className="bg-background p-8 md:p-10 border border-border relative flex flex-col"
+                >
+                  <span className="font-serif-display text-8xl italic text-primary/30 leading-none absolute -top-2 left-6">
+                    "
+                  </span>
+                  <p className="relative font-serif-display text-xl italic text-ink leading-relaxed mb-8 mt-6">
+                    {t.text}
+                  </p>
+                  <footer className="border-t border-border pt-5 mt-auto">
+                    <div className="font-serif-display text-xl text-ink">{t.name}</div>
+                    <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1 whitespace-pre-line min-h-8">
+                      {t.role}
                     </div>
-                  </div>
+                  </footer>
+                </blockquote>
+              ))}
+          </div>
+        </div>
       </section>
 
-          {/* CONTATO */}
-          <section id="contato" className="py-24 md:py-36 px-6 md:px-10 bg-foreground text-background">
-            <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
-              <div className="md:col-span-5">
-                <div className="text-xs uppercase tracking-[0.3em] text-background/70 mb-4">
-                  Contato ·  §05
-                </div>
-                <h2 className="font-serif-display text-5xl md:text-6xl leading-none mb-8">
-                  Comece sua<br />
-                  <em className="text-background underline decoration-primary decoration-2 underline-offset-8">recuperação</em><br />
-                  hoje.
-                </h2>
-                <p className="text-background/80 text-lg leading-relaxed mb-10">
-                  Atendimento domiciliar e consultório em Belo Horizonte.
-                </p>
-                <div className="space-y-6">
-                  <div>
-                    <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Endereço</div>
-                    <div className="font-serif-display text-2xl">Belo Horizonte — MG</div>
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Horários</div>
-                    <div className="font-serif-display text-2xl">Seg – Sex · 7h às 18h</div>
-                  </div>
-                  <div>
-                    <div className="text-xs uppercase tracking-widest text-background/60 mb-1">WhatsApp</div>
-                    <a
-                      href="https://wa.me/5531991337130"
-                      target="_blank"
-                      rel="noreferrer"
-                      className="font-serif-display text-2xl text-background hover:text-primary transition-colors"
-                    >
-                      (31) 9 9133-7130
-                    </a>
-                  </div>
-                </div>
+      {/* CONTATO */}
+      <section id="contato" className="py-24 md:py-36 px-6 md:px-10 bg-foreground text-background">
+        <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
+          <div className="md:col-span-5">
+            <div className="text-sm uppercase tracking-[0.3em] text-background/70 mb-4">
+              Contato
+            </div>
+            <h2 className="font-serif-display text-5xl md:text-6xl leading-none mb-8">
+              Comece sua<br />
+              <em className="text-background underline decoration-primary decoration-2 underline-offset-8">recuperação</em><br />
+              hoje.
+            </h2>
+            <p className="text-background/80 text-lg leading-relaxed mb-10">
+              Atendimento domiciliar em Belo Horizonte.
+            </p>
+            <div className="space-y-6">
+              <div>
+                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Endereço</div>
+                <div className="font-serif-display text-2xl">Belo Horizonte — MG</div>
               </div>
-
-              <div className="md:col-span-7 md:pl-8 flex flex-col justify-center">
-                <div className="border border-background/20 p-8 md:p-12 bg-background/5 backdrop-blur">
-                  <p className="font-serif-display text-2xl md:text-3xl leading-snug mb-6">
-                    Vamos conversar e encontrar o melhor caminho para o seu cuidado.
-                  </p>
-                  <p className="text-background/70 mb-8">
-                    Clique no botão abaixo e envie uma mensagem pré-preenchida pelo WhatsApp. Responderemos o mais breve possível.
-                  </p>
-                  <a
-                    href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-sm uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors"
-                  >
-                    <span>Conversar no WhatsApp</span>
-                    <span aria-hidden="true">→</span>
-                  </a>
-                </div>
+              <div>
+                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Horários</div>
+                <div className="font-body text-xl tracking-wide tabular-nums">Seg – Sex · 7h às 18h</div>
+              </div>
+              <div>
+                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">WhatsApp</div>
+                <a
+                  href="https://wa.me/5531991337130"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="font-body text-xl tracking-wide tabular-nums text-background hover:text-primary transition-colors"
+                >
+                  (31) 9 9133-7130
+                </a>
               </div>
             </div>
-          </section>
+          </div>
 
-          {/* FOOTER */}
-          <footer className="py-10 px-6 md:px-10 bg-background border-t border-border">
-            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-              <div className="flex items-center gap-3">
-                <img src="/images/logo-simbolo.png" alt="" width={569} height={600} loading="lazy" className="h-10 w-auto" />
-                <span className="flex flex-col leading-none">
-                  <span className="font-serif-display text-xl tracking-wide text-ink uppercase">Deivis Cordeiro</span>
-                  <span className="mt-1 text-[0.6rem] uppercase tracking-[0.4em] text-primary">Fisioterapeuta</span>
-                </span>
-              </div>
-              <div className="flex gap-8 text-xs uppercase tracking-widest text-muted-foreground">
-                <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-                <a href="https://wa.me/5531991337130" className="hover:text-primary transition-colors">WhatsApp</a>
-                <a href="#" className="hover:text-primary transition-colors">Google</a>
-              </div>
-              <p className="text-xs text-muted-foreground">
-                © 2026 Deivis Cordeiro · CREFITO 54341-F
+          <div className="md:col-span-7 md:pl-8 flex flex-col justify-center">
+            <div className="border border-background/20 p-8 md:p-12 bg-background/5 backdrop-blur">
+              <p className="font-serif-display text-2xl md:text-3xl leading-snug mb-6">
+                Vamos conversar e encontrar o melhor caminho para o seu cuidado.
               </p>
+              <p className="text-background/70 mb-8">
+                Clique no botão abaixo e envie uma mensagem pré-preenchida pelo WhatsApp. Responderemos o mais breve possível.
+              </p>
+              <a
+                href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
+                target="_blank"
+                rel="noreferrer"
+                className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-sm uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors"
+              >
+                <span>Conversar no WhatsApp</span>
+                <span aria-hidden="true">→</span>
+              </a>
             </div>
-          </footer>
-
-          {/* Floating WhatsApp */}
-          <a
-            href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
-            target="_blank"
-            rel="noreferrer"
-            aria-label="WhatsApp"
-            className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl shadow-editorial hover:scale-110 transition-transform"
-          >
-            ✆
-          </a>
+          </div>
         </div>
-        );
+      </section>
+
+      {/* FOOTER */}
+      <footer className="py-10 px-6 md:px-10 bg-background border-t border-border">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+          <div className="flex items-center gap-3">
+            <img src="/images/logo-simbolo.png" alt="" width={569} height={600} loading="lazy" className="h-10 w-auto" />
+            <span className="flex flex-col leading-none">
+              <span className="font-serif-display text-xl tracking-wide text-ink uppercase">Deivis Cordeiro</span>
+              <span className="mt-1 text-[0.6rem] uppercase tracking-[0.4em] text-primary">Fisioterapeuta</span>
+            </span>
+          </div>
+          <div className="flex gap-8 text-xs uppercase tracking-widest text-muted-foreground">
+            <a href="https://www.instagram.com/deivis.cordeiro/" className="hover:text-primary transition-colors">Instagram</a>
+            <a href="https://wa.me/5531991337130" className="hover:text-primary transition-colors">WhatsApp</a>
+            <a href="#" className="hover:text-primary transition-colors">Google</a>
+          </div>
+          <p className="text-xs text-muted-foreground">
+            © 2026 Deivis Cordeiro · CREFITO 54341-F
+          </p>
+        </div>
+      </footer>
+
+      {/* Floating WhatsApp */}
+      <a
+        href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
+        target="_blank"
+        rel="noreferrer"
+        aria-label="WhatsApp"
+        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl shadow-editorial hover:scale-110 transition-transform"
+      >
+        ✆
+      </a>
+    </div>
+  );
 }
