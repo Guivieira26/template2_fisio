@@ -6,24 +6,24 @@ export const Route = createFileRoute("/")({
 });
 
 const services = [
-  { n: "01", title: "Fisioterapia Respiratória", tag: "Atendimento CTI", desc: "Atuação especializada no cuidado de pacientes críticos, com foco na prevenção de complicações, recuperação funcional, reabilitação respiratória e motora." },
-  { n: "02", title: "Ortopédica & Desportiva", tag: "Atletas & Ativos", desc: "Prevenção de lesões, recuperação funcional e aprimoramento do desempenho físico, auxiliando o retorno seguro às atividades." },
-  { n: "03", title: "Fisioterapia Neurológica", tag: "AVC · Parkinson", desc: "Tratamento especializado para recuperar funcionalidade e independência de pacientes com sequelas neuromotoras." },
-  { n: "04", title: "Saúde do Idoso", tag: "Envelhecer bem", desc: "Cuidado integral do idoso, promovendo movimento, segurança e qualidade de vida em todas as fases do envelhecimento." },
-  { n: "05", title: "Acupuntura", tag: "Terapia integrativa", desc: "Técnicas tradicionais para modulação da dor, controle de processos inflamatórios, redução do estresse e equilíbrio sistêmico." },
-  { n: "06", title: "Trabalho & Ergonomia", tag: "Saúde ocupacional", desc: "Avaliação e intervenção voltadas à saúde ocupacional, prevenção de lesões e adequação ergonômica em ambientes de trabalho." },
+  { n: "01", title: "Fisioterapia Respiratória", tag: "Atendimento CTI", desc: "Atuação especializada no cuidado de pacientes críticos, com foco na prevenção de complicações, recuperação funcional, reabilitação respiratória e motora, contribuindo para uma evolução clínica mais segura." },
+  { n: "02", title: "Fisioterapia Ortopédica e Desportiva", tag: "Atletas & Ativos", desc: "Atuação na prevenção de lesões, recuperação funcional e aprimoramento do desempenho físico, auxiliando atletas e praticantes de atividades esportivas a retornarem às suas atividades com segurança." },
+  { n: "03", title: "Fisioterapia Neurológica", tag: "AVC · Parkinson", desc: "Tratamento especializado para recuperar a funcionalidade e independência de pacientes com sequelas de AVC, Parkinson, esclerose e outras condições neuromotoras." },
+  { n: "04", title: "Fisioterapia na Saúde do Idoso", tag: "Envelhecer bem", desc: "Envelhecer com qualidade é manter a capacidade de viver com autonomia. A fisioterapia atua no cuidado integral do idoso, promovendo movimento, segurança e qualidade de vida em todas as fases do envelhecimento." },
+  { n: "05", title: "Acupuntura", tag: "Terapia integrativa", desc: "Aplicação de técnicas tradicionais para modulação da dor, controle de processos inflamatórios, redução do estresse e equilíbrio sistêmico do organismo." },
+  { n: "06", title: "Fisioterapia do Trabalho e Ergonomia", tag: "Saúde ocupacional", desc: "Avaliação e intervenção voltadas à saúde ocupacional, prevenção de lesões relacionadas ao trabalho, adequação ergonômica e promoção de ambientes mais seguros e saudáveis." },
 ];
 
 const testimonials = [
-  { name: "Alexandre", role: "Fisioterapia Neurológica", text: "Me respeitou como pessoa e mesmo com dois meses de internamento, me ajudou muito a fazer com que a depressão ficasse longe. Obrigado pelo apoio, um cuidado efetivo. Que Deus te abençoe e te guarde, sempre." },
-  { name: "Kauanny", role: "Atendimento CTI", text: "Eu lhe agradeço muito, dia 22/07 fez um ano da minha alta e do dia em que consegui caminhar com sua ajuda. Deus te abençoe grandiosamente — seu trabalho e sua humanidade fazem a diferença. Serei eternamente grata." },
-  { name: "Carlos", role: "Paciente pós-COVID", text: "Só tenho a agradecer — se não fosse sua atenção, cuidado e dedicação talvez eu nem estaria aqui hoje. Que Deus te abençoe imensamente e que você continue prestando esse serviço maravilhoso." },
+  { name: "Alexandre", role: "Fisioterapia Neurológica", text: "Me respeitou como pessoa e mesmo com dois meses de internamento, me ajudou muito a fazer com que a depressão ficasse longe. Obrigado pelo apoio, pois sabemos que não é fácil com tanta gente pra ser ajudada e ainda manter um atendimento personalizado, um cuidado efetivo. Obrigado meu amigo, que Deus te abençoe e te guarde, sempre." },
+  { name: "Kauanny", role: "Atendimento CTI", text: "Eu lhe agradeço muito, dia 22/07 fez um ano da minha alta e do dia em que consegui caminhar com sua ajuda... Deus te abençoe grandiosamente seu trabalho e sua humanidade fazem a diferença na vida de muitas pessoas grande abraço fisio, serei eternamente grata! 🙏🏼" },
+  { name: "Carlos", role: "Paciente - COVID-19", text: "Cara só tenho a agradecer se não fosse sua atenção, cuidado e dedicação talvez eu nem estaria aqui hoje. Que Deus te abençõe imensamente e que você continue prestando esse serviço maravilhoso como fisio, muito obrigado!" },
 ];
 
 const stats = [
   { value: "5.700+", label: "Pacientes atendidos" },
-  { value: "23", label: "Anos de trajetória" },
-  { value: "100%", label: "Satisfação" },
+  { value: "23+", label: "Anos de experiência" },
+  { value: "100%", label: "Taxa de satisfação" },
   { value: "12", label: "Especialidades" },
 ];
 
@@ -62,9 +62,8 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       {/* NAV */}
       <nav
-        className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${
-          scrolled || menuOpen ? "bg-background/95 backdrop-blur border-b border-border" : "bg-transparent"
-        }`}
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-500 ${scrolled || menuOpen ? "bg-background/95 backdrop-blur border-b border-border" : "bg-transparent"
+          }`}
       >
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between py-4">
           <a href="#" className="flex items-center gap-3" aria-label="Deivis Cordeiro · Fisioterapeuta">
@@ -136,7 +135,7 @@ function Index() {
           <div className="md:col-span-7 animate-fade-up">
             <div className="flex items-center gap-3 mb-8 text-xs uppercase tracking-[0.3em] text-muted-foreground">
               <span className="h-px w-10 bg-primary" />
-              <span>Belo Horizonte · desde 2001</span>
+              <span>Belo Horizonte · Atendimento presencial</span>
             </div>
             <h1 className="font-serif-display text-[clamp(3rem,8vw,7rem)] leading-[0.95] text-ink">
               O movimento
@@ -212,7 +211,7 @@ function Index() {
           <div className="text-xs uppercase tracking-[0.4em] text-background/50 mb-10">Manifesto ·  §01</div>
           <p className="font-serif-display text-3xl md:text-5xl leading-tight text-background">
             Cada corpo carrega uma história. A fisioterapia começa quando alguém
-            se dispõe a ouvir essa história antes de tocar —{" "}
+            se dispõe a ouvir essa história{" "}
             <em className="text-primary">com paciência, técnica e presença</em>.
           </p>
           <div className="mt-16 flex items-center gap-4">
@@ -305,16 +304,24 @@ function Index() {
                 Com <strong className="text-ink">23 anos de dedicação</strong>{" "}
                 à Fisioterapia, desenvolvo um trabalho voltado à recuperação
                 funcional, prevenção de limitações e promoção da qualidade de
-                vida.
+                vida. Minha trajetória profissional é marcada pela busca
+                constante de conhecimento e pela integração de diferentes áreas
+                da saúde, permitindo um olhar amplo e individualizado sobre cada
+                paciente.
               </p>
               <p>
-                Minha trajetória é marcada pela busca constante de conhecimento
-                e pela integração de diferentes áreas da saúde, permitindo um
-                olhar amplo e individualizado sobre cada paciente.
+                Atuo com uma abordagem baseada em avaliação criteriosa,
+                planejamento terapêutico e cuidado humanizado, respeitando as
+                particularidades e objetivos de cada pessoa.
               </p>
               <p>
-                Formado pela <em>Universidade Positivo</em> (Curitiba/PR), com
-                pós-graduação em cinco especialidades:
+                Minha missão é transformar conhecimento e experiência em
+                resultados, ajudando pacientes a recuperar movimentos, autonomia
+                e confiança para viver melhor.
+              </p>
+              <p>
+                Formado pela <em>Universidade Positivo</em> (Curitiba/PR).
+                Pós-Graduação / Especialização:
               </p>
             </div>
 
@@ -353,126 +360,121 @@ function Index() {
             </h2>
           </div>
           <div className="grid md:grid-cols-3 gap-8">
-            {testimonials.map((t, i) => (
-              <blockquote
-                key={t.name}
-                className="bg-background p-8 md:p-10 border border-border relative"
-              >
-                <span className="font-serif-display text-8xl italic text-primary/30 leading-none absolute -top-2 left-6">
-                  "
-                </span>
-                <p className="relative font-serif-display text-xl italic text-ink leading-relaxed mb-8 mt-6">
-                  {t.text}
-                </p>
-                <footer className="border-t border-border pt-5 flex items-baseline justify-between">
-                  <div>
-                    <div className="font-serif-display text-xl text-ink">{t.name}</div>
-                    <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
-                      {t.role}
+              {
+                testimonials.map((t) => (
+                  <blockquote
+                    key={t.name}
+                    className="bg-background p-8 md:p-10 border border-border relative flex flex-col"
+                  >
+                    <span className="font-serif-display text-8xl italic text-primary/30 leading-none absolute -top-2 left-6">
+                      "
+                    </span>
+                    <p className="relative font-serif-display text-xl italic text-ink leading-relaxed mb-8 mt-6">
+                      {t.text}
+                    </p>
+                        <footer className="border-t border-border pt-5 mt-auto">
+                          <div className="font-serif-display text-xl text-ink">{t.name}</div>
+                          <div className="text-xs uppercase tracking-widest text-muted-foreground mt-1">
+                            {t.role}
+                          </div>
+                        </footer>
+                      </blockquote>
+            ))}
                     </div>
                   </div>
-                  <div className="text-xs text-muted-foreground">
-                    №{String(i + 1).padStart(2, "0")}
+      </section>
+
+          {/* CONTATO */}
+          <section id="contato" className="py-24 md:py-36 px-6 md:px-10 bg-foreground text-background">
+            <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
+              <div className="md:col-span-5">
+                <div className="text-xs uppercase tracking-[0.3em] text-background/70 mb-4">
+                  Contato ·  §05
+                </div>
+                <h2 className="font-serif-display text-5xl md:text-6xl leading-none mb-8">
+                  Comece sua<br />
+                  <em className="text-background underline decoration-primary decoration-2 underline-offset-8">recuperação</em><br />
+                  hoje.
+                </h2>
+                <p className="text-background/80 text-lg leading-relaxed mb-10">
+                  Atendimento domiciliar e consultório em Belo Horizonte.
+                </p>
+                <div className="space-y-6">
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Endereço</div>
+                    <div className="font-serif-display text-2xl">Belo Horizonte — MG</div>
                   </div>
-                </footer>
-              </blockquote>
-            ))}
-          </div>
-        </div>
-      </section>
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Horários</div>
+                    <div className="font-serif-display text-2xl">Seg – Sex · 7h às 18h</div>
+                  </div>
+                  <div>
+                    <div className="text-xs uppercase tracking-widest text-background/60 mb-1">WhatsApp</div>
+                    <a
+                      href="https://wa.me/5531991337130"
+                      target="_blank"
+                      rel="noreferrer"
+                      className="font-serif-display text-2xl text-background hover:text-primary transition-colors"
+                    >
+                      (31) 9 9133-7130
+                    </a>
+                  </div>
+                </div>
+              </div>
 
-      {/* CONTATO */}
-      <section id="contato" className="py-24 md:py-36 px-6 md:px-10 bg-foreground text-background">
-        <div className="max-w-6xl mx-auto grid md:grid-cols-12 gap-12">
-          <div className="md:col-span-5">
-            <div className="text-xs uppercase tracking-[0.3em] text-background/70 mb-4">
-              Contato ·  §05
-            </div>
-            <h2 className="font-serif-display text-5xl md:text-6xl leading-none mb-8">
-              Comece sua<br />
-              <em className="text-background underline decoration-primary decoration-2 underline-offset-8">recuperação</em><br />
-              hoje.
-            </h2>
-            <p className="text-background/80 text-lg leading-relaxed mb-10">
-              Primeira avaliação sem compromisso. Atendimento domiciliar e
-              consultório em Belo Horizonte.
-            </p>
-            <div className="space-y-6">
-              <div>
-                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Endereço</div>
-                <div className="font-serif-display text-2xl">Belo Horizonte — MG</div>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">Horários</div>
-                <div className="font-serif-display text-2xl">Seg – Sex · 7h às 18h</div>
-              </div>
-              <div>
-                <div className="text-xs uppercase tracking-widest text-background/60 mb-1">WhatsApp</div>
-                <a
-                  href="https://wa.me/5531991337130"
-                  target="_blank"
-                  rel="noreferrer"
-                  className="font-serif-display text-2xl text-background hover:text-primary transition-colors"
-                >
-                  (31) 9 9133-7130
-                </a>
+              <div className="md:col-span-7 md:pl-8 flex flex-col justify-center">
+                <div className="border border-background/20 p-8 md:p-12 bg-background/5 backdrop-blur">
+                  <p className="font-serif-display text-2xl md:text-3xl leading-snug mb-6">
+                    Vamos conversar e encontrar o melhor caminho para o seu cuidado.
+                  </p>
+                  <p className="text-background/70 mb-8">
+                    Clique no botão abaixo e envie uma mensagem pré-preenchida pelo WhatsApp. Responderemos o mais breve possível.
+                  </p>
+                  <a
+                    href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
+                    target="_blank"
+                    rel="noreferrer"
+                    className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-sm uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors"
+                  >
+                    <span>Conversar no WhatsApp</span>
+                    <span aria-hidden="true">→</span>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
+          </section>
 
-          <div className="md:col-span-7 md:pl-8 flex flex-col justify-center">
-            <div className="border border-background/20 p-8 md:p-12 bg-background/5 backdrop-blur">
-              <p className="font-serif-display text-2xl md:text-3xl leading-snug mb-6">
-                Vamos conversar e encontrar o melhor caminho para o seu cuidado.
+          {/* FOOTER */}
+          <footer className="py-10 px-6 md:px-10 bg-background border-t border-border">
+            <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+              <div className="flex items-center gap-3">
+                <img src="/images/logo-simbolo.png" alt="" width={569} height={600} loading="lazy" className="h-10 w-auto" />
+                <span className="flex flex-col leading-none">
+                  <span className="font-serif-display text-xl tracking-wide text-ink uppercase">Deivis Cordeiro</span>
+                  <span className="mt-1 text-[0.6rem] uppercase tracking-[0.4em] text-primary">Fisioterapeuta</span>
+                </span>
+              </div>
+              <div className="flex gap-8 text-xs uppercase tracking-widest text-muted-foreground">
+                <a href="#" className="hover:text-primary transition-colors">Instagram</a>
+                <a href="https://wa.me/5531991337130" className="hover:text-primary transition-colors">WhatsApp</a>
+                <a href="#" className="hover:text-primary transition-colors">Google</a>
+              </div>
+              <p className="text-xs text-muted-foreground">
+                © 2026 Deivis Cordeiro · CREFITO 54341-F
               </p>
-              <p className="text-background/70 mb-8">
-                Clique no botão abaixo e envie uma mensagem pré-preenchida pelo WhatsApp. Responderemos o mais breve possível.
-              </p>
-              <a
-                href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex items-center gap-3 px-8 py-4 bg-primary text-primary-foreground text-sm uppercase tracking-widest hover:bg-background hover:text-foreground transition-colors"
-              >
-                <span>Conversar no WhatsApp</span>
-                <span aria-hidden="true">→</span>
-              </a>
             </div>
-          </div>
-        </div>
-      </section>
+          </footer>
 
-      {/* FOOTER */}
-      <footer className="py-10 px-6 md:px-10 bg-background border-t border-border">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-          <div className="flex items-center gap-3">
-            <img src="/images/logo-simbolo.png" alt="" width={569} height={600} loading="lazy" className="h-10 w-auto" />
-            <span className="flex flex-col leading-none">
-              <span className="font-serif-display text-xl tracking-wide text-ink uppercase">Deivis Cordeiro</span>
-              <span className="mt-1 text-[0.6rem] uppercase tracking-[0.4em] text-primary">Fisioterapeuta</span>
-            </span>
-          </div>
-          <div className="flex gap-8 text-xs uppercase tracking-widest text-muted-foreground">
-            <a href="#" className="hover:text-primary transition-colors">Instagram</a>
-            <a href="https://wa.me/5531991337130" className="hover:text-primary transition-colors">WhatsApp</a>
-            <a href="#" className="hover:text-primary transition-colors">Google</a>
-          </div>
-          <p className="text-xs text-muted-foreground">
-            © 2026 Deivis Cordeiro · CREFITO 54341-F
-          </p>
+          {/* Floating WhatsApp */}
+          <a
+            href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
+            target="_blank"
+            rel="noreferrer"
+            aria-label="WhatsApp"
+            className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl shadow-editorial hover:scale-110 transition-transform"
+          >
+            ✆
+          </a>
         </div>
-      </footer>
-
-      {/* Floating WhatsApp */}
-      <a
-        href="https://wa.me/5531991337130?text=Olá!%20Gostaria%20de%20agendar%20uma%20avaliação%20de%20fisioterapia."
-        target="_blank"
-        rel="noreferrer"
-        aria-label="WhatsApp"
-        className="fixed bottom-6 right-6 z-40 w-14 h-14 rounded-full bg-primary text-primary-foreground flex items-center justify-center text-2xl shadow-editorial hover:scale-110 transition-transform"
-      >
-        ✆
-      </a>
-    </div>
-  );
+        );
 }
